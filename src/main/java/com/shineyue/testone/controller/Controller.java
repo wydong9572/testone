@@ -15,11 +15,11 @@ import com.shineyue.testone.service.MarketFrStatVService;
 @RestController
 public class Controller {
 	@Autowired
-	MarketFrStatVService market;
+	MarketFrStatVService markets;
 	
 	 @RequestMapping("/getUser")
     public MarketFrStatV getUser(Integer userid) {
-        MarketFrStatV user=market.getOne(userid);
+        MarketFrStatV user=markets.getOne(userid);
         System.out.println(user);
         return user;
     }
